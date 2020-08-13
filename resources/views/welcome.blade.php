@@ -84,9 +84,10 @@
                     Quantitune
                 </div>
 
-                <div class="links">
+                <div class="links">*
                     <a href="https://homestead.test/test">TEST!!!</a>
-                    <form> <input>Enter your Artist ID</input> </form>  
+                    <input type="password"> 
+                    <input  placeholder="text">Enter your Artist ID</input>  
                 </div>
             </div>
         </div>
