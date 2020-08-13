@@ -18,5 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return view('test');
+    //get data from db
+     $user = [
+         'type' => 'songwriter',
+         'membership' => 'paying'
+     ];
+
+    return view('test', $user);
 });

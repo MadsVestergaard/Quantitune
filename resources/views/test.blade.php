@@ -82,6 +82,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Test
+                    <p> {{$type}}  - {{$membership}} </p>
                 </div>
 
                 <div class="links">
