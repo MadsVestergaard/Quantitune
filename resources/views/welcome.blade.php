@@ -18,11 +18,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Quantitune
+                    Quantitune TEST 12345"
                 </div>
 
                 <div class="links">*
-                    <a href="https://homestead.test/test">TEST!!!</a>
+                    
+                    <a href="{{url('/test')}}">TEST!!!</a>
                     <input type="password"> 
                     <input  placeholder="text">Enter your Artist ID</input>  
                 </div>
