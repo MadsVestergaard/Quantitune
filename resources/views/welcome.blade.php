@@ -18,13 +18,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Quantitune TEST 12345"
+                    Quantitune
                 </div>
 
                 <div class="links">*
                     
                     <a href="{{url('/test')}}">TEST!!!</a>
-                    <input type="password"> 
                     <input  placeholder="text">Enter your Artist ID</input>  
                 </div>
             </div>
