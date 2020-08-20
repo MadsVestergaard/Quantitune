@@ -38,12 +38,14 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+            "app/database/migrations"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Acme\\controllers\\": "app/controllers"
         }
     },
     "minimum-stability": "dev",
