@@ -21,7 +21,7 @@ class CreateSongsTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->index(['songs'])
+            $table->index(['songs']);
 
         });
     }
