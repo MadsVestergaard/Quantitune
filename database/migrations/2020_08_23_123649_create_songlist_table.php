@@ -19,7 +19,7 @@ class CreateSonglistTable extends Migration
             $table->text('songname');
             $table->interger('songlength');
             $table->text('radiostation');
-            $table->text('artist')
+            $table->text('artist');
             
         });
     }
