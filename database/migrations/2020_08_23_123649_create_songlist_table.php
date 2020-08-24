@@ -17,8 +17,9 @@ class CreateSonglistTable extends Migration
             $table->id();
             $table->timestamps();
             $table->text('songname');
-            $table->text('songlength');
+            $table->interger('songlength');
             $table->text('radiostation');
+            $table->text('artist')
             
         });
     }

@@ -11,7 +11,7 @@ class AddSongsToUsersTable extends Migration
      *
      * @return void
      */
-    public function up()58956
+    public function up()
     {
         Schema::table('users', function (Blueprint $table) {
 		$table->text('songs');
