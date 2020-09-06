@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+ @extends('layouts.layout')
 
 @section('content')
         <div class="flex-center position-ref full-height">
@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://homestead.test/">HOME!</a>
+                    <a href="{{url('/test')}}">Home!!!</a>
 
                 </div>
             </div>
