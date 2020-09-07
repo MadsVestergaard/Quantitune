@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{url('/test')}}">Home!!!</a>
+                    <a href="{{url('/welcome')}}">Home!!!</a>
 
                 </div>
             </div>
