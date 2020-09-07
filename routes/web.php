@@ -25,9 +25,8 @@ Route::get('/test', function () {
      ];
 
     return view('test', $user);
+});
 
-    Route::get('/radiopromotion', function () {
-        return view('radiopromotion');
-    });
-
+Route::get('/radiopromotion', function () {
+    return view('radiopromotion');
 });
