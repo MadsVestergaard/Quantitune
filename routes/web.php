@@ -24,7 +24,7 @@ Route::get('/test', function () {
          'membership' => 'paying'
      ];
 
-    return view('test', $user);
+    return view('test',  $user);
 });
 
 Route::get('/radiopromotion', function () {

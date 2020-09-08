@@ -3,9 +3,9 @@
 @section('content')
 <div class="content"> 
     <div class="title m-b-md">
-    <p> Dav </p>
+        <p> Dav </p>
 
     </div>
-    </div>
+</div>
 
 @endsection
