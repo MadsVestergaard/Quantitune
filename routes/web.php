@@ -18,10 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/songs', 'SongController@index');
-    //get data from db
 
 Route::get('/songs/{id}', 'SongController@show'); 
-    // use $id variable to query the db for a record
 
 Route::get('/radiopromotion', function () {
     return view('radiopromotion');

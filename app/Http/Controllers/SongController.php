@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-class SongController extends Controller
+use Illuminate\Http\Request;
+use App\Song;
 
+class SongController extends Controller
 {
     public function index() {
-        $songs = [
-            ['duration' => '300', 'artist' => 'ACDC'],
-            ['duration' => '298', 'artist' => 'Deep Purple'],
-            ['duration' => '180', 'artist' => 'Queen'],
-            ['duration' => '148', 'artist' => 'Kidd']
-        ];
+        $songs = Song::all()
    
         return view('songs', [
             'songs' => $songs,
@@ -22,3 +19,7 @@ class SongController extends Controller
         return view('details', ['id' => $id]);
     }
 }
+
+
+
+    
