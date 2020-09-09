@@ -19,8 +19,12 @@
             <div class="content">
                 <div class="title m-b-md">
                     Test
-                    <p> {{$type}}  - {{$membership}} </p>
-                </div>
+
+                    @foreach($songs as $song)
+                        <div>
+                            {{ $song['duration'] }} - {{ $song['artist'] }}
+                        </div>
+                    @endforeach
 
                 <div class="links">
                     <a href="{{url('/')}}">Home!!!</a>

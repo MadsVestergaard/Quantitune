@@ -15,7 +15,10 @@
                     @endauth
                 </div>
             @endif
+            <head>
+                <title>App Name - @yield('title')</title>
 
+            </head>
             <div class="content">
                 <div class="title m-b-md">
                     Quantitune

@@ -19,14 +19,24 @@ Route::get('/', function () {
 
 Route::get('/test', function () {
     //get data from db
-     $user = [
-         'type' => 'songwriter',
-         'membership' => 'paying'
+
+     $songs = [
+         ['duration' => '300', 'artist' => 'ACDC'],
+         ['duration' => '298', 'artist' => 'Deep Purple'],
+         ['duration' => '180', 'artist' => 'Queen'],
+         ['duration' => '148', 'artist' => 'Kidd']
      ];
 
-    return view('test',  $user);
+     return view('songs', [
+         'songs' => $songs,
+     ]);
 });
 
 Route::get('/radiopromotion', function () {
     return view('radiopromotion');
+});
+
+Route::get('/test/{id}', function ($id) {
+    // use $id variable to query the db for a record
+    return view('details', ['id' => $id]);
 });
