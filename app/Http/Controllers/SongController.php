@@ -8,7 +8,8 @@ use App\Song;
 class SongController extends Controller
 {
     public function index() {
-        $songs = Song::all()
+        
+        $songs = Song::all();
    
         return view('songs', [
             'songs' => $songs,
