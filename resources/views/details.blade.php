@@ -6,8 +6,10 @@
             <div class="content">
                 <div class="title m-b-md">
                     Test
-                    <p> User {{$id}} </p>
+                    
                 </div>
+
+                <p> Song  #{{$id}} </p>
 
                 <div class="links">
                     <a href="{{url('/')}}">Home!!!</a>

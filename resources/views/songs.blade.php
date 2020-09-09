@@ -19,17 +19,19 @@
             <div class="content">
                 <div class="title m-b-md">
                     Test
+                
+                </div>
 
-                    @foreach($songs as $song)
+                @foreach($songs as $song)
                         <div>
                             {{ $song['duration'] }} - {{ $song['artist'] }}
                         </div>
-                    @endforeach
+                @endforeach
 
                 <div class="links">
                     <a href="{{url('/')}}">Home!!!</a>
-
                 </div>
+                
             </div>
         </div>
 @endsection
