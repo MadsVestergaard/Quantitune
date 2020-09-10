@@ -24,10 +24,9 @@
                     Quantitune
                 </div>
 
-                <div class="links">*
+                <div class="links">
                     
-                    <a href="{{url('/songs')}}">View your tracked songs!!</a>
-                    <input  placeholder="text">Enter your Artist ID</input>  
+                    <a href="{{url('/songs')}}">View your tracked songs!!</a>  
                 </div>
             </div>
         </div>   
