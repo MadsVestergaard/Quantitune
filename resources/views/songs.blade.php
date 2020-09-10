@@ -24,7 +24,7 @@
 
                 @foreach($songs as $song)
                         <div>
-                            {{ $song->artist}} - {{ $song->songlength}} - {{ $song->radiostation}}
+                            {{ $song->artist}}  - {{ $song->songname}} - {{ $song->songlength}} - {{ $song->radiostation}}
                         </div>
                 @endforeach
 
