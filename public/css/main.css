@@ -5,6 +5,7 @@ html, body {
     font-weight: 200;
     height: 100vh;
     margin: 0;
+    min-height: calc(100vh - 70px);
 }
 
 .full-height {
@@ -51,7 +52,10 @@ html, body {
 
 footer{
     background: #eee;
+    height: 50px;
     text-align: center;
-    padding: 20px;
-    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }   
