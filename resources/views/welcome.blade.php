@@ -26,7 +26,7 @@
 
                 <div class="links">*
                     
-                    <a href="{{url('/test')}}">TEST!!!</a>
+                    <a href="{{url('/songs')}}">View your tracked songs!!</a>
                     <input  placeholder="text">Enter your Artist ID</input>  
                 </div>
             </div>
