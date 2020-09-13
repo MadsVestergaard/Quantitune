@@ -30,3 +30,12 @@ Route::delete('/songs/{id}', 'SongController@destroy');
 Route::get('/radiopromotion', function () {
     return view('radiopromotion');
 });
+
+
+Route::get('/register', 'RegistrationController@create');
+Route::post('register', 'RegistrationController@store');
+ 
+Route::get('/login', 'SessionsController@create');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
+
