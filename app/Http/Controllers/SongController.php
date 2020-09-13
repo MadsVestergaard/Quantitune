@@ -32,6 +32,7 @@ class SongController extends Controller
     public function store(Request $request) {
        
         //used for debugging
+
         //echo dd($request->all()); 
         //return;
 
@@ -45,7 +46,14 @@ class SongController extends Controller
 
         $song->save();
 
-        return redirect('{{url('/')}}');
+        return redirect('/songs');
+    }
+
+    public function destroy($id) {
+        $song = Song::findOrFail($id);
+        $song->delete();
+
+        return redirect('/songs');
     }
 
     

@@ -25,6 +25,8 @@ Route::post('/songs', 'SongController@store');
 
 Route::get('/songs/{id}', 'SongController@show'); 
 
+Route::delete('/songs/{id}', 'SongController@destroy');
+
 Route::get('/radiopromotion', function () {
     return view('radiopromotion');
 });
