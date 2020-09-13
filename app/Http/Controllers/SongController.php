@@ -29,28 +29,23 @@ class SongController extends Controller
         return view('songs.create');
     }
 
-    public function store() {
-
-       // const $songname = request("songname");
-        //if (isset($songname) && !empty($songname))
-        //{
-            // do logic here
-          //  $song = new Song();
-
-            //$song->songname = $songname;
-            //...
+    public function store(Request $request) {
+       
+       
+        //echo dd($request->all());
+        //return;
 
 
         $song = new Song();
             
-        $song->songname = request('songname');
-        $song->artist = request('artist');
-        $song->radiostation = request('radiostation');
-        $song->songlength = request('songlength');
+        $song->songname = $request->songname;
+        $song->artist = $request->artist;
+        $song->radiostation = $request->radiostation;
+        $song->songlength = $request->songlength;
 
         $song->save();
 
-        return redirect('/');
+        return redirect('{{url('/')}}');
     }
 
     

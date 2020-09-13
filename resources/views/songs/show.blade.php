@@ -7,5 +7,5 @@
     <p class="station"> Radiostation - {{ $song->radiostation }}</p>
 </div>
 
-<a href="/songs" class="back"> Back To songs</a>
+<a href="{{url('/songs')}}" class="back"> Back To songs</a>
 @endsection
