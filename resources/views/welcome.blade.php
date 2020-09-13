@@ -22,6 +22,9 @@
             <div class="content">
                 <div class="title m-b-md">
                     Quantitune
+
+                    @if( auth()->check())
+                    <p> {{ auth()->user()->name }} </p>
                 </div>
 
                 <div class="links">
