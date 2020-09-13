@@ -25,6 +25,7 @@
 
                     @if( auth()->check())
                     <p> {{ auth()->user()->name }} </p>
+                    @endif
                 </div>
 
                 <div class="links">

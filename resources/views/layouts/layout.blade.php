@@ -14,7 +14,33 @@
 
     </head>
     <body>
+    <div class="navbar">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="/songs"> Songs </>
+            
+            @if( auth()->check() )
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hi {{ auth()->user()->name }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log Out</a>
+                </li>
+            @else
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+            @endif
+
+        </ul>
+        </div>
+        
         @yield('content')
+        
+
         <footer>
             Copyright 2020 Quantitune
         </footer>
