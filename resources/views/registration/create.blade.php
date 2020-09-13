@@ -28,6 +28,10 @@
         <div class="form-group">
             <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
         </div>
+
+        @if($errors->any())
+        <h4>{{$errors->first()}}</h4>
+        @endif
     </form>
  
 @endsection
