@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Route::get('/songs', 'SongController@index');
 
+Route::get('/songs/create', 'SongController@create');
+
+Route::post('/songs', 'SongController@store');
+
 Route::get('/songs/{id}', 'SongController@show'); 
 
 Route::get('/radiopromotion', function () {

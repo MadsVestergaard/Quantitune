@@ -26,7 +26,8 @@
 
                 <div class="links">
                     
-                    <a href="{{url('/songs')}}">View your tracked songs!!</a>  
+                    <a href="{{url('/songs')}}">View your tracked songs!!</a>
+                    <a href="{{url('/songs/create')}}"> Create a new song</a>  
                 </div>
             </div>
         </div>   
