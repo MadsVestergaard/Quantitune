@@ -31,6 +31,10 @@ Route::get('/radiopromotion', function () {
     return view('radiopromotion');
 });
 
+Route::get('/radiopromotion', function () {
+    return view('profile');
+});
+
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('register', 'RegistrationController@store');

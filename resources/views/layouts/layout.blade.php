@@ -21,7 +21,7 @@
             
             @if( auth()->check() )
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hi {{ auth()->user()->name }}</a>
+                    <a class="nav-link" href="/profile">Hi {{ auth()->user()->name }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Log Out</a>
