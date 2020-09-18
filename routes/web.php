@@ -31,7 +31,7 @@ Route::get('/radiopromotion', function () {
     return view('radiopromotion');
 });
 
-Route::get('/radiopromotion', function () {
+Route::get('/profile', function () {
     return view('profile');
 });
 
