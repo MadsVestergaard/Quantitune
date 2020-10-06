@@ -5,9 +5,9 @@ namespace App\Console\Commands;
 use DB;
 use Eloquent;
 use Illuminate\Console\Command;
-use App\Http\Controllers\Quote\ModelImport;
 
-class installModel extends Command
+
+class InsertDB extends Command
 {
     /**
      * The name and signature of the console command.
@@ -42,4 +42,9 @@ class installModel extends Command
      *
      * @return mixed
      */
-    p
+    
+     public function handle()
+    {
+        echo "Hello world!";
+    }
+}
