@@ -14,7 +14,9 @@ class InsertDB extends Command
      *
      * @var string
      */
-    protected $signature = 'model:import {--file=}';
+    //protected $signature = 'model:import {--file=}';
+    
+    protected $signature = "hallo:world";
 
     /**
      * The console command description.
