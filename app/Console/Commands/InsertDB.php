@@ -48,7 +48,7 @@ class InsertDB extends Command
      public function handle()
     {
         $options = $this->options();
-        if (file_exists($this->import_path . DIRECTORY_SEPARATOR . $options['file'])) 
+        if (file_exists($options['file'])) 
         {
             $query = sprintf("
                 LOAD DATA LOCAL INFILE '%s' INTO TABLE songlist
