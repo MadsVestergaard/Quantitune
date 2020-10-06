@@ -51,7 +51,7 @@ class InsertDB extends Command
         if (file_exists($options['file'])) 
         {
             $query = sprintf("LOAD DATA LOCAL INFILE '%s' INTO TABLE test", $options['file']) .
-        "FIELD TERMINATED BY ';'
+        "FIELDS TERMINATED BY ';'
 
         ENCLOSED BY '\"'
 
