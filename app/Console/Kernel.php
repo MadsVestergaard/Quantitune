@@ -13,7 +13,10 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        
+
+        Commands\installModel::class
+
     ];
 
     /**
