@@ -14,9 +14,9 @@ class InsertDB extends Command
      *
      * @var string
      */
-    //protected $signature = 'model:import {--file=}';
+    protected $signature = 'model:import {--file=}';
     
-    protected $signature = "hallo:world";
+    //protected $signature = "hallo:world";
 
     /**
      * The console command description.
@@ -47,6 +47,38 @@ class InsertDB extends Command
     
      public function handle()
     {
-        echo "Hello world!";
+        $options = $this->options();
+        if (file_exists($this->import_path . DIRECTORY_SEPARATOR . $options['file'])) 
+        {
+            $query = sprintf("
+                LOAD DATA LOCAL INFILE '%s' INTO TABLE songlist
+
+                FIELD TERMINATED BY ';'
+
+                ENCLOSED BY '\"'
+
+                LINES TERMINATED BY '\r\n'
+
+                IGNORE 1 LINES (No, Timestamp(UTC), Album, Duration, Program Title, Score, Label, Release Date, ISRC, ISWC, UPC, Deezer, Spotify, Youtube, Composers, Lyricists, Publishers);",
+                $options['file']
+            );
+            
+            echo $query . "\r\n";
+            
+            $pdo = DB::connection()->getPdo();
+
+            $recordCount = $pdo->exec($query);
+            if (empty($recordCount) || $recordCount == 0)
+            {
+                echo "Failed to import \r\n";
+            }
+            else
+            {
+                echo sprintf("Succeded import: %d\r\n", $recordCount);
+            }
+
+                
+        }
+
     }
 }
