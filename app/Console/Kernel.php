@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         
 
-        Commands\installModel::class
+        Commands\InsertDB::class
 
     ];
 
