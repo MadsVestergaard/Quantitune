@@ -58,7 +58,7 @@ class InsertDB extends Command
 
         LINES TERMINATED BY '\r\n'
 
-        IGNORE 1 LINES (No, Timestamp(UTC), Album, Duration, Program Title, Score, Label, Release Date, ISRC, ISWC, UPC, Deezer, Spotify, Youtube, Composers, Lyricists, Publishers);";
+        IGNORE 1 LINES (No, Timestamp\(UTC), Album, Duration, Program Title, Score, Label, Release Date, ISRC, ISWC, UPC, Deezer, Spotify, Youtube, Composers, Lyricists, Publishers);";
             
             echo $query . "\r\n";
             
