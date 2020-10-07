@@ -51,7 +51,7 @@ class InsertDB extends Command
         $options = $this->options();
         if (file_exists($options['file'])) 
         {
-            $query = sprintf("LOAD DATA LOCAL INFILE '%s'", $options['file']) .
+            $query = sprintf("LOAD DATA INFILE '%s'", $options['file']) .
         "
         INTO TABLE quantitune.test
         FIELDS TERMINATED BY ';'
@@ -66,7 +66,7 @@ class InsertDB extends Command
             
             $recordCount = $pdo->exec($query);
 
-            echo $recordCount;
+            echo $recordCount . "\r\n";
             
             if (empty($recordCount) || $recordCount == 0)
             {
