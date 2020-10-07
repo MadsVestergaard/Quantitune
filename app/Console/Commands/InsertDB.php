@@ -51,11 +51,14 @@ class InsertDB extends Command
         $options = $this->options();
         if (file_exists($options['file'])) 
         {
-            $query = sprintf("LOAD DATA LOCAL INFILE '%s' INTO TABLE quantitune.test", $options['file']) .
+            $query = sprintf("LOAD DATA LOCAL INFILE '%s'", $options['file']) .
         "
-        FIELDS TERMINATED BY ';' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES
-        (@No, @Timestamp, @TitleCol, @ArtistCol, @Album, @Duration, @Played_DurationCol, @ProgramTitle, @Score, @Label, @ReleaseDate, @ACRIDCol, @ISRC, @ISWC, @UPC, @Deezer, @Spotify, @Youtube, @Composers, @Lyricists, @Publishers)
-        SET Title=@TitleCol, Artist=@ArtistCol, Played_Duration=@Played_DurationCol, ACRID=@ACRIDCol;";
+        INTO TABLE quantitune.test
+        FIELDS TERMINATED BY ';'
+        ENCLOSED BY '\"'
+        LINES TERMINATED BY '\r\n'
+        IGNORE 1 LINES
+        (Title, Played_Duration, Artist, ACRID);";
         
             echo $query . "\r\n";
             
