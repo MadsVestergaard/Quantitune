@@ -63,8 +63,11 @@ class InsertDB extends Command
             echo $query . "\r\n";
             
             $pdo = DB::connection()->getPdo();
-
+            
             $recordCount = $pdo->exec($query);
+
+            echo $recordCount;
+            
             if (empty($recordCount) || $recordCount == 0)
             {
                 echo "Failed to import \r\n";
