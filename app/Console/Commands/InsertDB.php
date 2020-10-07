@@ -51,16 +51,16 @@ class InsertDB extends Command
         $options = $this->options();
         if (file_exists($options['file'])) 
         {
-            //$query = sprintf("LOAD DATA INFILE '%s'", $options['file']) .
-        //"
-        //INTO TABLE test
-        //FIELDS TERMINATED BY ';'
-        //ENCLOSED BY '\"'
-        //LINES TERMINATED BY '\r\n'
-        //IGNORE 1 LINES
-        //(Title, Played_Duration, Artist, ACRID);";
+            $query = sprintf("LOAD DATA LOCAL INFILE '%s'", $options['file']) .
+        "
+        INTO TABLE test
+        FIELDS TERMINATED BY ';'
+        ENCLOSED BY '\"'
+        LINES TERMINATED BY '\r\n'
+        IGNORE 1 LINES
+        (Title, Played_Duration, Artist, ACRID);";
 
-        $query = sprintf("INSERT INTO test (Title, Played_Duration, Artist, ACRID) VALUES ('%s', %d, '%s', '%s')", "hello", 10000, "world", "absoadism");
+        //$query = sprintf("INSERT INTO test (Title, Played_Duration, Artist, ACRID) VALUES ('%s', %d, '%s', '%s')", "hello", 10000, "world", "absoadism");
         
             echo $query . "\r\n";
             try
