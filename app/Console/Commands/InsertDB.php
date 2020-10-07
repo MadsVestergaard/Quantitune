@@ -52,12 +52,12 @@ class InsertDB extends Command
         if (file_exists($options['file'])) 
         {
             $query = sprintf("LOAD DATA LOCAL INFILE '%s' INTO TABLE test", $options['file']) .
-            " (@dummy, @dummy, Title, Artist, @dummy, @dummy, Played_Duration, @dummy, @dummy, @dummy, @dummy, ACRID, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy)
-            FIELDS TERMINATED BY ';'
-            ENCLOSED BY '\"'
-            LINES TERMINATED BY '\r\n'
-            IGNORE 1 LINES;";
-            
+        " (Title, Artist, Played_Duration, ACRID)
+        FIELDS TERMINATED BY ';'
+        ENCLOSED BY '\"'
+        LINES TERMINATED BY '\r\n'
+        IGNORE 1 LINES;";
+
             echo $query . "\r\n";
             
             $pdo = DB::connection()->getPdo();
