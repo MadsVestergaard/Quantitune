@@ -61,9 +61,6 @@ class InsertDB extends Command
             echo $query . "\r\n";
             
             $pdo = DB::connection()->getPdo();
-            $pdo::MYSQL_ATTR_LOCAL_INFILE = true;
-            
-
 
             $recordCount = $pdo->exec($query);
             if (empty($recordCount) || $recordCount == 0)
