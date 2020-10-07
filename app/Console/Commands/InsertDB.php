@@ -61,21 +61,29 @@ class InsertDB extends Command
         (Title, Played_Duration, Artist, ACRID);";
         
             echo $query . "\r\n";
-            
-            $pdo = DB::connection()->getPdo();
-            
-            $recordCount = $pdo->exec($query);
+            try
+            {
 
-            echo $recordCount . "\r\n";
-            
-            if (empty($recordCount) || $recordCount == 0)
-            {
-                echo "Failed to import \r\n";
+                $pdo = DB::connection()->getPdo();
+                
+                $recordCount = $pdo->exec($query);
+    
+                echo $recordCount . "\r\n";
+                
+                if (empty($recordCount) || $recordCount == 0)
+                {
+                    echo "Failed to import \r\n";
+                }
+                else
+                {
+                    echo sprintf("Succeded import: %d\r\n", $recordCount);
+                }
             }
-            else
+            catch (\Exception  $e)
             {
-                echo sprintf("Succeded import: %d\r\n", $recordCount);
+                dd($e->getMessage());
             }
+
 
                 
         }
