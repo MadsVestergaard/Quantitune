@@ -61,7 +61,7 @@ class InsertDB extends Command
             echo $query . "\r\n";
             
             $pdo = DB::connection()->getPdo();
-            $pdo::MYSQL_ATTR_LOCAL_INFILE => true;
+            $pdo::MYSQL_ATTR_LOCAL_INFILE = true;
             
 
 
