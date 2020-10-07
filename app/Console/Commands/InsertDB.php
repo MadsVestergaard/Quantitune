@@ -53,7 +53,7 @@ class InsertDB extends Command
         {
             $query = sprintf("LOAD DATA INFILE '%s'", $options['file']) .
         "
-        INTO TABLE quantitune.test
+        INTO TABLE test
         FIELDS TERMINATED BY ';'
         ENCLOSED BY '\"'
         LINES TERMINATED BY '\r\n'
