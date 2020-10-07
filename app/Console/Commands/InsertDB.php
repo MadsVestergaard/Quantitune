@@ -60,7 +60,7 @@ class InsertDB extends Command
         //IGNORE 1 LINES
         //(Title, Played_Duration, Artist, ACRID);";
 
-        $query = sprintf("INSERT INTO test (Title, Played_Duration, Artist, ACRID) VALUES (%s, %d, %s, %s)", "hello", 10000, "world", "absoadism");
+        $query = sprintf("INSERT INTO test VALUES (%s, %d, %s, %s)", "hello", 10000, "world", "absoadism");
         
             echo $query . "\r\n";
             try
