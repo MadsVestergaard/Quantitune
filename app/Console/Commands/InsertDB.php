@@ -50,12 +50,12 @@ class InsertDB extends Command
         $options = $this->options();
         if (file_exists($options['file'])) 
         {
-            $query = sprintf("LOAD DATA LOCAL INFILE '%s' INTO TABLE songlist", $options['file']) .
+            $query = sprintf("LOAD DATA LOCAL INFILE '%s' INTO TABLE test", $options['file']) .
         "
         FIELDS TERMINATED BY ';'
         ENCLOSED BY '\"'
         LINES TERMINATED BY '\r\n'
-        IGNORE 1 LINES (No, Timestamp, Album, Duration, ProgramTitle, Score, Label, ReleaseDate, ISRC, ISWC, UPC, Deezer, Spotify, Youtube, Composers, Lyricists, Publishers);";
+        IGNORE 1 LINES (@No, @Timestamp, Title, Artist, @Album, @Duration, Played_Duration, @ProgramTitle, @Score, @Label, @ReleaseDate, ACRID, @ISRC, @ISWC, @UPC, @Deezer, @Spotify, @Youtube, @Composers, @Lyricists, @Publishers);";
             
             echo $query . "\r\n";
             
