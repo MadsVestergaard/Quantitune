@@ -56,8 +56,8 @@ class InsertDB extends Command
             FIELDS TERMINATED BY ';'
             ENCLOSED BY '\"'
             LINES TERMINATED BY '\r\n'
-            IGNORE 1 LINES (No, Timestamp, Title, Artist, Album, Duration, Played_Duration, ProgramTitle, Score, Label, ReleaseDate, ACRID, ISRC, ISWC, UPC, Deezer, Spotify, Youtube, Composers, Lyricists, Publishers);";    
-
+            IGNORE 1 LINES;";
+            
             echo $query . "\r\n";
             
             $pdo = DB::connection()->getPdo();
