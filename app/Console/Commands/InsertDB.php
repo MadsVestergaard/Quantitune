@@ -52,10 +52,10 @@ class InsertDB extends Command
         if (file_exists($options['file'])) 
         {
             $query = sprintf("LOAD DATA LOCAL INFILE '%s' INTO TABLE test", $options['file']) .
-        " (Title, Artist, Played_Duration, ACRID)
-        FIELDS TERMINATED BY ';'
-        ENCLOSED BY '\"'
-        LINES TERMINATED BY '\r\n'
+        " (Title, Artist, Played_Duration, ACRID,)
+        FIELDS TERMINATED BY ';' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n'
+        (@No, @Timestamp, @Title, @Artist, @Album, @Duration, @Played_Duration, @ProgramTitle, @Score, @Label, @ReleaseDate, @ACRID, @ISRC, @ISWC, @UPC, @Deezer, @Spotify, @Youtube, @Composers, @Lyricists, @Publishers)
+        SET Title=@Title, Artist=@Artist, Played_Duration=@Played_Duration, ACRID=@ACRID
         IGNORE 1 LINES;";
 
             echo $query . "\r\n";
