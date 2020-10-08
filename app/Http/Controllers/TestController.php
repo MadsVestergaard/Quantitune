@@ -10,10 +10,10 @@ class TestController extends Controller
 {
     public function index(Request $request) {
         
-        $testsongs = Test::all();
-        //$songs = Song::orderBy('songName', 'desc')-> get();
-        //$testsongs = Test::where('artist', 'one direction')-> get();
-        //$songs = Song::latest();
+        //$testsongs = Test::all();
+        //$testsongs = Song::orderBy('songName', 'desc')-> get();
+        $testsongs = Test::where('artist', 'Clara')-> get();
+        //$testsongs = Song::latest();
         
         return view('test.index', [
             'testsongs' => $testsongs,
