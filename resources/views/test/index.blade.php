@@ -40,7 +40,7 @@
 
                 <h1>
                     @php
-                        $total_earned = isset($total_earned) ? $total / 60 * 48: 0;
+                        $total_earned = isset($total_earned) ? $total / 60 * 48;
                     @endphp
 
                     Your song has been played for a total of:  {{ $total }} seconds.
