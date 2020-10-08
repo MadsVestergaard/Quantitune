@@ -16,7 +16,7 @@ class TestController extends Controller
         //$songs = Song::latest();
         
         
-        echo dd($index->all());
+        echo dd($request->all());
         return;
 
 
