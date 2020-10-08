@@ -17,5 +17,8 @@ class TestController extends Controller
         return view('test.index', [
             'testsongs' => $testsongs,
         ]);
+
+        echo dd($index->all());
+        return;
 }
 }

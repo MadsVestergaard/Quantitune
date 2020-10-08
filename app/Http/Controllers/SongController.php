@@ -13,7 +13,6 @@ class SongController extends Controller
         //$songs = Song::orderBy('songName', 'desc')-> get();
         //$songs = Song::where('radiostation', 'p4')-> get();
         //$songs = Song::latest();
-        echo dd(index->all());
         return view('songs.index', [
             'songs' => $songs,
         ]);
