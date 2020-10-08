@@ -23,6 +23,6 @@ class TestController extends Controller
         return view('test.index', [
             'testsongs' => $testsongs,
         ]);
+    }
 
-}
 }
