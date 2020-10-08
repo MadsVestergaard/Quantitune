@@ -26,7 +26,10 @@
 
 
                 @foreach($testsongs as $test)
-                    
+                
+                @php
+                $total = isset($total) ? $total + $test->Played_Duration : 0;
+                @endphp    
                         <div>
                             {{ $test->Artist}}  - {{ $test->Title}} - {{ $test->Played_Duration}}
                         </div>
