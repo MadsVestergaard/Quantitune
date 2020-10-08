@@ -36,16 +36,11 @@
                 <div class="calculations">
 
                 <h1>
-                    @php
-                        $radio_rate = 48;
-                        $math = 60;
-                        $total_earned = isset($total_earned) ? $total/$math*$radio_rate: 0;
-                    @endphp
 
                     Your songs have been played for a total of:  {{ $total }} seconds.
 
                     <br>
-                    You've earned {{ $total/60*48}} kroner.
+                    You've earned an estimated {{ $total/60*48 }} dkk.
                 </h1>
 
                 </div>
