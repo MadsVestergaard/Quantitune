@@ -22,10 +22,23 @@
                 
                 </div>
 
+                <div class="calculations">
+
+                <h1>
+                    {{ $total }}
+                </h1>
+
+                </div>
+
+
                 @foreach($testsongs as $test)
+                    
                         <div>
                             {{ $test->Artist}}  - {{ $test->Title}} - {{ $test->Played_Duration}}
                         </div>
+
+                        @foreach($testsongs as $test)
+                            @php($total += $test->Played_Duration)
                 @endforeach
 
                 <div class="links">
