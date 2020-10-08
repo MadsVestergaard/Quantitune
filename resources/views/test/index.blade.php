@@ -22,13 +22,7 @@
                 
                 </div>
 
-                <div class="calculations">
-
-                <h1>
-                    {{ $total }}
-                </h1>
-
-                </div>
+                
 
 
                 @foreach($testsongs as $test)
@@ -42,9 +36,19 @@
                         @endforeach
                 @endforeach
 
+                <div class="calculations">
+
+                <h1>
+                    {{ $total }}
+                </h1>
+
+                </div>
+
                 <div class="links">
                     <a href="{{url('/')}}">Home!!!</a>
                 </div>
+                
+
                 
             </div>
         </div>
