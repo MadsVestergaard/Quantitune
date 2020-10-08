@@ -15,14 +15,10 @@ class TestController extends Controller
         $testsongs = Test::where('artist', 'one direction')-> get();
         //$songs = Song::latest();
         
-        
-        //echo dd($request->all());
-        //return;
-
-
         return view('test.index', [
             'testsongs' => $testsongs,
-        ]);
+            ]);
+            
     }
 
 }
