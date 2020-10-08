@@ -22,17 +22,14 @@
                 
                 </div>
 
-                
-
-
                 @foreach($testsongs as $test)
                 
-                @php
-                $total = isset($total) ? $total + $test->Played_Duration : 0;
-                @endphp    
-                        <div>
-                            {{ $test->Artist}}  - {{ $test->Title}} - {{ $test->Played_Duration}}
-                        </div>
+                    @php
+                        $total = isset($total) ? $total + $test->Played_Duration : 0;
+                    @endphp    
+                    <div>
+                        {{ $test->Artist}}  - {{ $test->Title}} - {{ $test->Played_Duration}}
+                    </div>
 
                 @endforeach
 
@@ -45,22 +42,17 @@
                         $total_earned = isset($total_earned) ? $total/$math*$radio_rate: 0;
                     @endphp
 
-                    Your song has been played for a total of:  {{ $total }} seconds.
+                    Your songs have been played for a total of:  {{ $total }} seconds.
 
                     <br>
-
-
-                    You've earned {{ $total_earned}} kroner.
+                    You've earned {{ $total/60*48}} kroner.
                 </h1>
 
                 </div>
 
                 <div class="links">
                     <a href="{{url('/')}}">Home!!!</a>
-                </div>
-                
-
-                
+                </div>  
             </div>
         </div>
 @endsection
