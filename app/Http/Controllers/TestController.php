@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Test;
+
 use Illuminate\Http\Request;
+use App\Test;
 
 class TestController extends Controller
 {
@@ -11,9 +12,9 @@ class TestController extends Controller
         
         //$tests = Test::all();
         //$songs = Song::orderBy('songName', 'desc')-> get();
-        $tests = Test::where('artist', 'one direction')-> get();
+        $testsongs = Test::where('artist', 'one direction')-> get();
         //$songs = Song::latest();
         return view('test.index', [
-            'tests' => $tests,
+            'testsongs' => $testsongs,
         ]);
 }
