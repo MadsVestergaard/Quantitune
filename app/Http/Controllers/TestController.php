@@ -8,7 +8,7 @@ use App\Test;
 
 class TestController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
         
         //$tests = Test::all();
         //$songs = Song::orderBy('songName', 'desc')-> get();
