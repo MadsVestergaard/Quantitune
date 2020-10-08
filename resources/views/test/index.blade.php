@@ -39,7 +39,14 @@
                 <div class="calculations">
 
                 <h1>
-                    {{ $total }}
+                    @php
+                        $total_earned = isset($total_earned) ? $total_earned / 60 * 48: 0;
+                    @endphp
+
+                    Your song has been played for a total of:  {{ $total }} seconds.
+
+
+                    You've earned {{ $total_earned}}
                 </h1>
 
                 </div>
