@@ -22,9 +22,9 @@
                 
                 </div>
 
-                @foreach($songs as $song)
+                @foreach($tests as $test)
                         <div>
-                            {{ $song->artist}}  - {{ $song->songname}} - {{ $song->songlength}} - {{ $song->radiostation}}
+                            {{ $test->artist}}  - {{ $test->title}} - {{ $test->songlength}}
                         </div>
                 @endforeach
 
