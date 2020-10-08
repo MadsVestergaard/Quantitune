@@ -11,9 +11,9 @@ class TestController extends Controller
         
         //$tests = Test::all();
         //$songs = Song::orderBy('songName', 'desc')-> get();
-        $songs = Song::where('artist', 'one direction')-> get();
+        $tests = Test::where('artist', 'one direction')-> get();
         //$songs = Song::latest();
         return view('test.index', [
-            'songs' => $songs,
+            'tests' => $tests,
         ]);
 }
