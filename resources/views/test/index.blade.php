@@ -24,7 +24,7 @@
 
                 @foreach($testsongs as $test)
                         <div>
-                            {{ $test->artist}}  - {{ $test->title}} - {{ $test->played_duration}}
+                            {{ $test->Artist}}  - {{ $test->Title}} - {{ $test->Played_Duration}}
                         </div>
                 @endforeach
 
