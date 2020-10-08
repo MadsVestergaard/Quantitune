@@ -39,6 +39,7 @@
 
                         @foreach($testsongs as $test)
                             @php($total += $test->Played_Duration)
+                        @endforeach
                 @endforeach
 
                 <div class="links">
