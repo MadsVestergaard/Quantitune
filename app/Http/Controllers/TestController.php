@@ -12,7 +12,7 @@ class TestController extends Controller
         
         //$testsongs = Test::all();
         //$testsongs = Song::orderBy('songName', 'desc')-> get();
-        $testsongs = Test::where('artist', 'Clara')-> get();
+        $testsongs = Test::where('artist', 'The Minds Of 99')-> get();
         //$testsongs = Song::latest();
         
         return view('test.index', [
