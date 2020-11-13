@@ -46,4 +46,4 @@ Route::get('/logout', 'SessionsController@destroy');
 
 
 Route::get('/test', 'TestController@index');
-
+Route::post('/test', 'TestController@getData')->name('test.store');
