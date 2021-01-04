@@ -17,7 +17,9 @@
             @endif
 
             <div class="content">
-                
+
+            <div class="title m-b-md">
+                    Songs from {{ Artist }}
                 
                 </div>
 
@@ -29,8 +31,7 @@
                     <div>
                         {{ $test->Artist}}  - {{ $test->Title}} - {{ $test->Played_Duration}}
                     </div>
-                    <div class="title m-b-md">
-                    Songs from {{ $test ->Artist }}
+                    
 
                 @endforeach
 
