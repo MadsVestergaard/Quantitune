@@ -18,7 +18,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Songs from {{ $test ->Artist }}
+                    Songs from {{ $testsongs ->Artist }}
                 
                 </div>
 
