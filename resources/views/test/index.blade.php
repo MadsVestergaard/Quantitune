@@ -17,10 +17,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Songs from {{ $test>Artist }}
                 
-                </div>
 
                 @foreach($testsongs as $test)
                 
@@ -30,6 +27,10 @@
                     <div>
                         {{ $test->Artist}}  - {{ $test->Title}} - {{ $test->Played_Duration}}
                     </div>
+                    <div class="title m-b-md">
+                    Songs from {{ $test>Artist }}
+                
+                </div>
 
                 @endforeach
 
