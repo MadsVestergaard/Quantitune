@@ -18,8 +18,7 @@
 
             <div class="content">
 
-            <div class="title m-b-md">
-                    Songs from {{ Artist }}
+            
                 
                 </div>
 
@@ -34,6 +33,9 @@
                     
 
                 @endforeach
+
+                <div class="title m-b-md">
+                    Songs from {{ $test ->Artist }}
 
                 <div class="calculations">
 
