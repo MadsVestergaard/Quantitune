@@ -22,15 +22,6 @@
                 
                 </div>
 
-                <form action=" {{ route('test.store') }}" method="post">
-                    {{csrf_field() }}
-
-                    @foreach($some_data as $data)
-                        <input type="hidden" name="some_data[]" value="{{ $data }}">
-                    @endforeach
-
-                    <input type="submit" value="Send">
-                </form>
                 @foreach($testsongs as $test)
                 
                     @php

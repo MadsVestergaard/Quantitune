@@ -21,11 +21,6 @@ class TestController extends Controller
             
     }
 
-    public function test() {
-        $some_data = ["pass", "data", "view", "to", "controller"];
-
-        return view('test.index', compact('some_data'));
-    }
 
     public function getData(Request $request) {
         return $request->all();
