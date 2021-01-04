@@ -18,7 +18,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Big Test
+                    Songs from {{ $test>Artist }}
                 
                 </div>
 
